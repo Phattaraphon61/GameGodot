@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://asset.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Target.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Grenade.scn" type="PackedScene" id=4]
+[ext_resource path="res://Turret.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ammo_Pickup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Health_Pickup.tscn" type="PackedScene" id=7]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Target_Whole" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -3.61183, 5.42606, 204.87 )
+
+[node name="Target_Whole2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -94.0655, 23.4586, 48.9563 )
+
+[node name="Target_Whole3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -43.1465, 19.8075, 205.645 )
+
+[node name="Target_Whole4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -43.1465, 19.8075, 190.207 )
+
+[node name="Target_Whole5" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 133.923, 46.9714, 97.4087 )
+
+[node name="Target_Whole6" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 133.923, 46.9714, 7.22005 )
+
+[node name="Target_Whole7" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -75.3428, 16.1565, -120.563 )
+
+[node name="Target_Whole8" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -123.083, 16.1565, -120.563 )
+
+[node name="Target_Whole9" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -112.678, 7.02975, -123.711 )
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 1, 1, 1 )
+cell_scale = 10.0
+data = {
+"cells": PoolIntArray( 327713, 1, 1441837, 32, 2, 655457, 327726, 2, 1441793, 8, 3, 655395, 88, 3, 52, 99, 3, 57, 327721, 3, 1441837, 65499, 5, 655466, 8, 6, 655393, 18, 6, 655395, 65499, 6, 655466, 65524, 6, 655394, 65534, 6, 655393, 131091, 6, 655396, 458760, 7, 655396, 524276, 7, 655396, 524286, 7, 655396, 786441, 7, 655404, 851956, 7, 655398, -71, 7, 537526289, -62, 7, 655377, -51, 8, 655405, 48, 9, 538312814, 66, 9, 1441902, 32, 11, -536215455, 65485, 11, 1048624, 65505, 11, 1048649, 65460, 14, 111, 7, 16, 1048675, 8, 16, 1441868, 18, 16, 1441868, 27, 16, 1441869, 65524, 16, 1048675, 65534, 16, 1441868, -65536, 17, 10, -65526, 17, 10, -65517, 17, 10, -65507, 17, 10, 327713, 20, 1441837, 32, 21, 655457, 65456, 21, 111, 65504, 21, 1441823, 327721, 21, 1441837, 50, 23, 1441887, 60, 23, 1441887, 70, 23, 1441887, 47, 26, 1441867, 48, 26, 1441902, 65490, 26, 111, 65453, 29, 111, 32, 31, 655457, 50, 31, 1441902, 65507, 32, 1441902, 327726, 32, 1441793, 59, 33, 1441902, 327721, 36, 1441837, -65518, 36, 538312808, -65506, 36, 1441896, 65450, 37, 111, 327712, 37, 538312749, 32, 40, 655457, -65525, 40, 655371, -65515, 40, 655371, 65455, 41, 655415, 51, 43, 1441902, 65450, 43, 111, 130990, 43, 655416, 45, 45, 1441902, 32, 49, 655457, 65452, 50, 111, 51, 51, 1441902, 327721, 54, 1441837, 65454, 55, 111, 327713, 55, 1441837, 65514, 57, 655368, 65518, 57, 655368, 32, 59, 655457, 65457, 59, 111, 65482, 59, 655363, 65493, 59, 655363, 65512, 59, 1048668, 65529, 60, 1048628, 65529, 61, 655372, 65460, 64, 111, 65463, 68, 111, 46, 70, 1048600, 65467, 70, 1441902, 65485, 70, 1441847, 65493, 70, 1441886, 65512, 70, 1441885, 65531, 71, 655372, 131020, 71, 1441848, 65491, 73, 655363, 65531, 74, 1441902, 65476, 75, 1441902, 11, 76, 47, 32, 79, 655442, 42, 79, 52, 65504, 82, 655468, 65510, 82, 655467, 15, 83, 1048600, 26, 85, 1441902, 18, 86, 1441902, 65493, 86, 1441858, -65490, 93, 1441795, -65490, 96, 3, -65513, 97, 1441856, -65513, 98, 1441854, 23, 99, 1441844, 12, 65450, 1048631, -65512, 65450, 655377, -65502, 65450, 655381, -65496, 65456, 1048593, 40, 65471, 655363, 49, 65477, 1048630, 65518, 65480, 655415, 65528, 65480, 52, -51, 65481, 655378, -42, 65481, 655378, -33, 65481, 655379, 19, 65494, 1441902, 32, 65499, 655461, 42, 65499, 82, 65508, 65500, 1441893, -43, 65500, 1441821, -27, 65500, 1441821, 65461, 65505, 1441811, 24, 65508, 1441902, 69, 65508, 1048633, 65470, 65510, 655412, 65471, 65510, 655422, 65471, 65511, 655424, 0, 65515, 655406, 65491, 65515, 655406, 65502, 65515, 655406, 65513, 65515, 655406, 65524, 65515, 655406, 22, 65518, 655365, 68, 65519, 1048628, 65462, 65522, 1441793, 32, 65528, 655458, 12, 65529, 1441893, 30, 65529, 1441893, 48, 65529, 1441893, 68, 65529, 1075183717, 65490, 65529, 1441844, 65510, 65529, 1441893, 65530, 65529, 1441893, 65491, 65530, 1441854, 65491, 65531, 1441856, 65521, 65534, 1441902, 524227, 65534, 655376, 524228, 65534, 655376, 524218, 65535, 655376, 524235, 65535, 655376 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -1, -1 )
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -17.4748, 0, 65.1855 )
+
+[node name="Turret" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -221.001, 3.14306, 77.0761 )
+
+[node name="Turret2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -93.6682, 2.59929, 204.874 )
+
+[node name="Turret3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 84.6934, 23.4769, 14.6585 )
+
+[node name="Turret4" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -176.606, 1.99767, -28.6643 )
+
+[node name="Grenade" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -218.074, 3.42965, 151.717 )
+
+[node name="Health_Pickup" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -224.193, 3.62113, 134.814 )
+
+[node name="Health_Pickup2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.2614, 3.98466, 197.573 )
+
+[node name="Health_Pickup3" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 115.649, 22.3916, 47.9986 )
+
+[node name="Health_Pickup4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.719, 5.65634, -139.411 )
+
+[node name="Ammo_Pickup" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -122.5, 7.04846, 43.1727 )
+
+[node name="Ammo_Pickup2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -122.5, 7.04846, 55.2509 )
+
+[node name="Ammo_Pickup3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -226.564, 4.31992, 112.453 )
+
+[node name="Ammo_Pickup4" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -174.153, 3.77867, 193.254 )
+
+[node name="Ammo_Pickup5" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.2379, 3.77867, 278.435 )
+
+[node name="Ammo_Pickup6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 114.02, 20.6624, 2.13388 )
+
+[node name="Ammo_Pickup7" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.1832, 4.61689, -240.064 )
